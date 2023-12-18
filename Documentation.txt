@@ -1,0 +1,43 @@
+Function generateDataTable(a, b, c) has 3 parameters:
+	a. element on which datatable will be generated.
+	b. Data for table. pass [] empty array if table is already in HTML.
+	c. Config for table.
+1st parameter is compulsory in all cases.
+2nd parameter is table data, if table is already in HTML pass empty data [] in 2nd parameter (to pass 3rd parameter).
+3rd parameter is optional That is configuration.
+_______________________________________________________________________________________
+NOTE: if using bootstrap, Element must have class of 'row' like <div class="row" id="this_is_element"></div>
+=======================================================================================
+
+===========================================================================================================================
+	CONFIG NAME 			=> Config Defination/Usage
+===========================================================================================================================
+1.	status					=> ColumnName (<th> text) to convert values into icon
+2.	language				=> "en" currently not in use
+3.	searchable				=> Boolean (default "false") Will create searchbar for table
+4.	recordInfo				=> Boolean (default "true") will show text on bottom right as record Info
+5.	changeLength			=> Boolean (default "false") will make Dropdown on bottom left to change Number of rows per page
+6.	downloadable			=> Boolean (default "false") to create download button for download table data
+7.	selectable				=> Boolean (default "false") to create checkboxes in each Row, 'identifier' column is necessary
+8.	identifier				=> ColumnName (<th> text) unique Text in Row for Row operation
+9.	sorting					=> Boolean (default "true") to make Sortable Columns
+10.	pagination				=> Boolean (default "true") to Enable/Disable pagination
+11.	outerFilter				=> [{,}]
+	11.1. columnName 		=> ColumnName (<th> text) for Outer filter
+	11.2. appendTo			=> OPTIONAL, Where to append outerfilters if required
+12. numericSorting			=> [{,}]
+	12.1. columnName		=> ColumnName (<th> text) for numeric Sorting
+	12.2. sortType			=> OPTIONAL, if you need "DATE" or "DATE & TIME" sorting. VALUES are "date" & "datetime"
+13. hideColumns				=> [{,}]
+	13.1. columnName		=> ColumnName (<th> text) to hide columns. USE "filterable" if you need any operation on hidden columns
+	13.2. filterable		=> Boolean, to add any operation on hidden columns
+14. filters					=> [{,}]
+	14.1. columnName		=> ColumnName (<th> text) to create filters for specific column.
+	14.2. filterType		=> filter type for each defined column name. ("select", "checkbox", "range", "date", "datetime")
+15. addColumn				=> [{,}]
+	15.1. headerText		=> STRING, for <th> for extra Column "Actions" (Will be added in <th></th>)
+	15.2. addButtons		=> [{,}]
+		15.2.1	buttonText	=> STRING, to be Shown in new Button "Edit"
+		15.2.2	class		=> STRING, class to add in new Button "btn btn-edit"
+		15.2.3	preId		=> STRING, pre text for ID to add in new Button "aEdit_"
+		15.2.4	titleText	=> STRING, to add in title attribute of new Button "Edit"

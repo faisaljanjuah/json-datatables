@@ -1,0 +1,97 @@
+{
+	"status": true,
+	"language": "en",
+	"searchable": true,
+	"recordInfo": true,
+	"changeLength": true,
+	"downloadable": true,
+	"selectable" : true,
+	"identifier": "msisdn",
+	"outerFilter": [
+		{
+			"columnName": "credit_limit"
+		}
+	],
+	"numericSorting": [
+		{
+			"columnName": "outstanding_amount"
+		},
+		{
+			"columnName": "date",
+			"sortType": "date"
+		}
+	],
+	"hideColumns": [
+		{
+			"columnName": "group"
+		},
+		{
+			"columnName": "due_date"
+		}
+	],
+	"filters": [
+		{
+			"columnName": "package",
+			"filterType": "checkbox"
+		},
+		{
+			"columnName": "groupName",
+			"filterType": "select"
+		},
+		{
+			"columnName": "date",
+			"filterType": "date"
+		},
+		{
+			"columnName": "credit_limit",
+			"filterType": "range"
+		}
+	],
+	"addColumn": [
+		{
+			"headerText": "Actions",
+			"addButtons": [
+				{
+					"buttonText": "",
+					"class": "btnAction edit",
+					"preId": "aEdit_",
+					"titleText": "Edit"
+				},
+				{
+					"buttonText": "",
+					"class": "btnAction delete",
+					"preId": "aDelete_",
+					"titleText": "Delete"
+				},
+				{
+					"buttonText": "",
+					"class": "btnAction view",
+					"preId": "aView_",
+					"titleText": "View"
+				}
+			]
+		},
+		{
+			"headerText": "More",
+			"addButtons": [
+				{
+					"buttonText": "Pay Bill",
+					"class": "btn btn-primary",
+					"preId": "aPayBill_",
+					"titleText": "Pay Bill"
+				}
+			]
+		},
+		{
+			"headerText": "Extras",
+			"addButtons": [
+				{
+					"buttonText": "Ledger",
+					"class": "btn btn-secondary",
+					"preId": "aLedger_",
+					"titleText": "Ledger"
+				}
+			]
+		}
+	]
+}
